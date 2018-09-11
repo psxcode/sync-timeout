@@ -1,5 +1,5 @@
-export { default as wait } from './wait'
-export { default as waitPromise } from './wait-promise'
-export { default as ping } from './ping'
+export { default as syncTimeout } from './synctimeout'
+export { default as syncTimeoutPromise } from './synctimeout-promise'
+export { default as syncInterval } from './syncinterval'
 export { timeframes } from './timeframes'
 export { Timeframe } from './types'

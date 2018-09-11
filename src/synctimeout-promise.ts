@@ -3,7 +3,7 @@ import { waitPromise as w } from '@psxcode/wait'
 import alignTime from './align-time'
 import { isTimeframe, timeframes as tf } from './timeframes'
 
-const waitPromiseEx = (timeGetter: () => number) =>
+const syncTimeoutPromiseEx = (timeGetter: () => number) =>
   (timeframe: number | Timeframe, offsetMs = 0) => {
     const t = alignTime(() => timeGetter() + offsetMs)
     return isTimeframe(timeframe)
@@ -11,4 +11,4 @@ const waitPromiseEx = (timeGetter: () => number) =>
       : w(t(timeframe))()
   }
 
-export default waitPromiseEx(Date.now)
+export default syncTimeoutPromiseEx(Date.now)

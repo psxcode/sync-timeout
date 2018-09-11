@@ -3,7 +3,7 @@ import { ping as p } from '@psxcode/wait'
 import alignTime from './align-time'
 import { isTimeframe, timeframes as tf } from './timeframes'
 
-export const pingEx = (timeGetter: () => number) =>
+export const syncIntervalEx = (timeGetter: () => number) =>
   (timeframe: number | Timeframe, offsetMs = 0) =>
     (callback: () => void) => {
       const t = alignTime(() => timeGetter() + offsetMs)
@@ -15,4 +15,4 @@ export const pingEx = (timeGetter: () => number) =>
       }
     }
 
-export default pingEx(Date.now)
+export default syncIntervalEx(Date.now)
