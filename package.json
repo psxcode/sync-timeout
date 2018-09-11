@@ -1,0 +1,41 @@
+{
+  "name": "wait-aligned",
+  "version": "0.1.0",
+  "description": "Aligned functional setTimeout and setInterval",
+  "keywords": [
+    "setTimeout",
+    "setInterval",
+    "promise",
+    "timeout",
+    "functional"
+  ],
+  "main": "build/index.js",
+  "module": "build/index",
+  "typings": "build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "private": false,
+  "license": "MIT",
+  "author": "psxcode <psxcode@gmail.com> (https://github.com/psxcode)",
+  "homepage": "https://github.com/psxcode/wait-aligned",
+  "scripts": {
+    "test": "mocha --opts mocha.opts",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "dependencies": {
+    "@psxcode/wait": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.9.4",
+    "@types/sinon": "^5.0.2",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "rimraf": "^2.6.2",
+    "sinon": "^6.2.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3"
+  }
+}
