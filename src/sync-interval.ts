@@ -1,18 +1,14 @@
 import { Timeframe } from './types'
 import { ping as p } from '@psxcode/wait'
-import alignTime from './align-time'
+import alignedTimeGetter from './aligned-time-getter'
 import { isTimeframe, timeframes as tf } from './timeframes'
 
 export const syncIntervalEx = (timeGetter: () => number) =>
   (timeframe: number | Timeframe, offsetMs = 0) =>
-    (callback: () => void) => {
-      const t = alignTime(() => timeGetter() + offsetMs)
-      return () => {
-        return isTimeframe(timeframe)
-          ? p(t(tf[timeframe]))(callback)()
-          : p(t(timeframe))(callback)()
-
-      }
-    }
+    p(alignedTimeGetter(() => timeGetter() + offsetMs)(
+      isTimeframe(timeframe)
+        ? tf[timeframe]
+        : timeframe
+    ))
 
 export default syncIntervalEx(Date.now)
