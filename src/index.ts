@@ -1,5 +1,5 @@
-export { default as syncTimeout } from './synctimeout'
-export { default as syncTimeoutPromise } from './synctimeout-promise'
-export { default as syncInterval } from './syncinterval'
+export { default as syncTimeout } from './sync-timeout'
+export { default as syncTimeoutPromise } from './sync-timeout-promise'
+export { default as syncInterval } from './sync-interval'
 export { timeframes } from './timeframes'
 export { Timeframe } from './types'
