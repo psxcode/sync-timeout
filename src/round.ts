@@ -1,4 +1,4 @@
-const round = (roundTo: number, roundingFn: typeof Math.round) => {
+const round = (roundingFn: typeof Math.round) => (roundTo: number) => {
   if (roundTo <= 0) {
     throw new Error(`cannot round to ${roundTo}`)
   }
