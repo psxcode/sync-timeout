@@ -17,7 +17,7 @@ You can provide your timeframe as number, for example
 
 ### `syncTimeout`
 `(timeframe: number | Timeframe, offsetMs: number) => (callback: () => void) => () => void`
-```
+```ts
 import { syncTimeout } from 'sync-timeout'
 
 // invoke my code on next 30-second aligned timestamp
@@ -32,7 +32,7 @@ cancel() // cancel timeout
 
 ### `syncTimeoutPromise`
 `(timeframe: number | Timeframe, offsetMs: number) => Promise<void>`
-```
+```ts
 import { syncTimeout } from 'sync-timeout'
 
 // invoke my code on next 30-second aligned timestamp
@@ -47,7 +47,7 @@ cancel() // cancel timeout
 
 ### `syncInterval`
 `(timeframe: number | Timeframe, offsetMs: number) => (callback: () => void) => () => void`
-```
+```ts
 import { syncInterval } from 'sync-timeout'
 
 // invoke my code on EVERY 30-second aligned timestamp
