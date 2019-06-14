@@ -1,4 +1,7 @@
 # SyncTimeout
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/psxcode/sync-timeout.svg)](https://greenkeeper.io/)
+
 Time-aligned functional `setTimeout` and `setInterval`.
 
 ### Install
